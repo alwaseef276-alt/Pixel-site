@@ -37,9 +37,14 @@
                                                             for (let i = 0; i < 400; i++) {
                                                                 const cell = document.createElement("div");
                                                                     cell.className = "cell";
-                                                                        cell.onclick = function () {
-                                                                              this.style.background = "blue";
-                                                                                  };
+                                                                    cell.onclick = function () {
+                                                                          if (this.style.background === "blue") {
+                                                                              this.style.background = "lightgray";
+                                                                                } else {
+                                                                                    this.style.background = "blue";
+                                                                                      }
+                                                                                      };
+                                                                    }
                                                                                       grid.appendChild(cell);
                                                                                         }
                                                                                         </script>
