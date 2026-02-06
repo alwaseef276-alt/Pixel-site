@@ -1,1 +1,45 @@
-add 20x20 grid
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Pixel Grid</title>
+
+<style>
+  body {
+      margin: 0;
+          display: flex;
+              justify-content: center;
+                  align-items: center;
+                      height: 100vh;
+                        }
+
+                          .grid {
+                              display: grid;
+                                  grid-template-columns: repeat(20, 20px);
+                                      grid-template-rows: repeat(20, 20px);
+                                          gap: 1px;
+                                            }
+
+                                              .cell {
+                                                  width: 20px;
+                                                      height: 20px;
+                                                          background: #ddd;
+                                                            }
+                                                            </style>
+                                                            </head>
+
+                                                            <body>
+                                                              <div class="grid">
+                                                                  <!-- المربعات -->
+                                                                      <script>
+                                                                            for (let i = 0; i < 400; i++) {
+                                                                                    document.write('<div class="cell"></div>');
+                                                                                          }
+                                                                                              </script>
+                                                                                                </div>
+                                                                                                </body>
+                                                                                                </html>add 20x20 grid.cell:hover {
+                                                                                                      background: #aaa;
+                                                                                                        cursor: pointer;
+                                                                                                        }document.write('<div class="cell" onclick="this.style.background=\'#00aaff\'"></div>');
+                                                                                                }
