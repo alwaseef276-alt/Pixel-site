@@ -2,40 +2,47 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Pixel Grid</title>
+<title>Pixel Test</title>
 
 <style>
   body {
       margin: 0;
-          display: flex;
-              justify-content: center;
-                  align-items: center;
-                      height: 100vh;
+          height: 100vh;
+              display: flex;
+                  justify-content: center;
+                      align-items: center;
                         }
 
                           .grid {
                               display: grid;
                                   grid-template-columns: repeat(20, 20px);
-                                      grid-template-rows: repeat(20, 20px);
-                                          gap: 1px;
-                                            }
+                                      gap: 2px;
+                                        }
 
-                                              .cell {
-                                                  width: 20px;
-                                                      height: 20px;
-                                                          background: #ddd;
-                                                            }
-                                                            </style>
-                                                            </head>
+                                          .cell {
+                                              width: 20px;
+                                                  height: 20px;
+                                                      background: lightgray;
+                                                        }
+                                                        </style>
+                                                        </head>
 
-                                                            <body>
-                                                              <div class="grid">
-                                                                  <!-- المربعات -->
-                                                                      <script>
-                                                                            for (let i = 0; i < 400; i++) {
-                                                                                    document.write('<div class="cell"></div>');
-                                                                                          }
-                                                                                              </script>
-                                                                                                </div>
-                                                                                                </body>
-                                                                                                </html>
+                                                        <body>
+
+                                                        <div class="grid" id="grid"></div>
+
+                                                        <script>
+                                                          const grid = document.getElementById("grid");
+
+                                                            for (let i = 0; i < 400; i++) {
+                                                                const cell = document.createElement("div");
+                                                                    cell.className = "cell";
+                                                                        cell.onclick = function () {
+                                                                              this.style.background = "blue";
+                                                                                  };
+                                                                                      grid.appendChild(cell);
+                                                                                        }
+                                                                                        </script>
+
+                                                                                        </body>
+                                                                                        </html>
